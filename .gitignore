@@ -1,0 +1,47 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+
+# Playwright
+playwright-report/
+playwright/.cache/
+test-results/
+test-results-png/
+test-results-html/
+test-results-json/
+test-results-videos/
+test-results-traces/
+playwright-report/
+playwright/.cache/
+
+# Playwright config (if you don't want to commit it)
+# playwright.config.ts
+# playwright.config.js
+
+# VS Code Playwright extension
+.vscode/playwright.code-workspace
+
+# Temporary files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Coverage reports (if using)
+coverage/
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env.local
+.env.*.local
