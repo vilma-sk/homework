@@ -24,12 +24,13 @@ export class HomePage extends BasePage {
         this.productItems = this.page.locator('.product-list__link');
         this.productTitle = this.page.getByTestId('product-list-section-item-title');
         this.productPrice = this.page.getByTestId('product-list-section-item-price');
-        this.discountCodeLocator = page.locator('section.block-sticky-bar .body-small').first();
+        this.discountCodeLocator = this.page.locator('section.block-sticky-bar .body-small').first();
     }
 
     async openHomePage(): Promise<void> {
         await this.goToUrl(process.env.HOME_PAGE_URL!);
         await expect(this.productsContainer).toBeVisible();
+        await this.dismissCookieBanner();
     }
 
     async selectProductByIndex(index: number): Promise<ProductDetails> {

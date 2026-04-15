@@ -15,4 +15,11 @@ export abstract class BasePage {
         return (await this.page.title()).trim();
     }
 
+    async dismissCookieBanner(): Promise<void> {
+        const acceptButton = this.page.locator('.cookie-banner').getByRole('button', { name: 'Accept' });
+        if (await acceptButton.isVisible()) {
+            await acceptButton.click();
+        }
+    }
+
 }
