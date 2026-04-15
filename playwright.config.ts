@@ -18,7 +18,14 @@ export default defineConfig({
   
   use: {
     trace: 'on-first-retry',
-    testIdAttribute: 'data-qa'
+    testIdAttribute: 'data-qa',
+    locale: 'lt-LT',
+    timezoneId: 'Europe/Vilnius',
+    geolocation: {
+      latitude: 54.6872,
+      longitude: 25.2797
+    },
+    permissions: ['geolocation']
   },
 
   /* Configure projects for major browsers */
